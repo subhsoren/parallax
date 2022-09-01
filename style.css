@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Nixie+One&display=swap');
+body {
+    font-family: 'Nixie One', cursive;
+}
+header {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('../images/banner.jpg');
+    background-size:cover;
+}
+.about {
+    height: 300vh;
+    display: flex;
+}
+.about-title {
+    width: 50%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 !important;
+
+}
+.about-images {
+    width: 50%;
+}
+.about-images div{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center
+}
+.about-images > div > p {
+    line-height:30px;
+    color: #fff;
+}
+.about-images div:nth-child(1){
+    background-color: rgb(56,134,89);
+}
+.about-images div:nth-child(2){
+    background-color: rgb(129,42,110);
+}
+.about-images div:nth-child(3){
+    background-color: rgb(31,88,107);
+}
+.banner {
+    background: url('../images/banner-2.jpg') fixed no-repeat center/cover;
+    height:100vh;
+}

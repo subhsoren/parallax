@@ -1,593 +1,297 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Parallax Effect</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <header>
-      <h1>Parallax</h1>
-    </header>
-    <section class="about">
-      <div class="about-title">
-        <p>
-          We are stronger, gentler, more resilient, and more beautiful than any
-          of us imagine
-        </p>
-      </div>
-      <div class="about-images">
-        <div>
-          <h1>Project 1</h1>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad iure
-            voluptates quia neque, quaerat, ratione sit nobis saepe ipsum vitae
-            ea placeat eaque animi et ex voluptatum aliquam consectetur labore
-            odit voluptate cum officia accusamus ipsa. Praesentium aspernatur
-            est sunt.
-          </p>
-        </div>
-        <div>
-          <h1>Project 2</h1>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad iure
-            voluptates quia neque, quaerat, ratione sit nobis saepe ipsum vitae
-            ea placeat eaque animi et ex voluptatum aliquam consectetur labore
-            odit voluptate cum officia accusamus ipsa. Praesentium aspernatur
-            est sunt.
-          </p>
-        </div>
-        <div>
-          <h1>Project 3</h1>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad iure
-            voluptates quia neque, quaerat, ratione sit nobis saepe ipsum vitae
-            ea placeat eaque animi et ex voluptatum aliquam consectetur labore
-            odit voluptate cum officia accusamus ipsa. Praesentium aspernatur
-            est sunt.
-          </p>
-        </div>
-      </div>
-    </section>
-    <div class="banner"></div>
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/debug.addIndicators.min.js"
-      integrity="sha512-RvUydNGlqYJapy0t4AH8hDv/It+zKsv4wOQGb+iOnEfa6NnF2fzjXgRy+FDjSpMfC3sjokNUzsfYZaZ8QAwIxg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
-    <script src="script.js"></script>
-  </body>
-</html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!DOCTYPE html>
-<html lang="en-US">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-  <title>Parallax</title>
+  <title>Parallax Effects</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
+  <!-- Nixie Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Nixie+One&display=swap" rel="stylesheet">
 
-
+  <!-- Font Awesome -->
   <link id='uc_stackpath_bootstrapcdn_com_font_awesome_4_7_0_css_font_awesome_min_css-css'
     href='https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' type='text/css'
     rel='stylesheet'>
 
-  <link id='uc_unpkg_com_aos_2_3_1_dist_aos_css-css' href='https://unpkg.com/aos@2.3.1/dist/aos.css' type='text/css'
-    rel='stylesheet'>
-
-
-
-
-  <style type="text/css" id="wp-custom-css">
-    html,
-    body {
-      overflow-y: scroll !important;
+  <style>
+    /* body {
+    position: relative;
+    } */
+    .feature-section {
+      position: relative;
     }
-   
-    
-  </style>
-  <!-- BootStrap CSS -->
-  <link rel="stylesheet" href="css/bootstrap.min.css">
 
-  <!-- Main CSS -->
-  <link rel="stylesheet" href="css/main.css">
+    ul.nav-pills {
+      top: 20px;
+      position: fixed;
+      width: 50%;
+
+    }
+
+    div.col-sm-9 div {
+      /* height: 250px; */
+      /* font-size: 28px; */
+    }
+
+
+    .feature1 {
+      /* width: 100%; */
+      text-align: end;
+      padding-bottom: 10%;
+    }
+
+    .feature1 img {
+      max-width: 54.5625rem;
+      width: 45.46875vw;
+      z-index: 10;
+      margin-top: 10px;
+      box-shadow: 0 0 40px 10px rgb(0 0 0 / 20%);
+    }
+
+    .feature2 {
+      text-align: end;
+      padding-bottom: 10%;
+    }
+
+    .feature2 img {
+      z-index: 5;
+      max-width: 36.1875rem;
+      width: 30.15625vw;
+      margin-top: 18px;
+    }
+
+    nav .nav-pills li {
+      display: none !important;
+      /* z-index: -1 !important; */
+
+    }
+
+    .nav li a {
+      font-family: 'Nixie One', cursive;
+
+
+    }
+
+    nav .nav-pills li.active {
+      color: #999;
+      display: block !important;
+      -webkit-animation: fadein 5s;
+      -moz-animation: fadein 5s;
+      -ms-animation: fadein 5s;
+      -o-animation: fadein 5s;
+      animation: fadein 5s;
+      font-size: 20px;
+      line-height: 1.7;
+      text-decoration: none;
+      font-family: nixie;
+      /* padding-left: 50px; */
+
+    }
+
+    @keyframes fadein {
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
+    }
+
+    /* Firefox < 16 */
+    @-moz-keyframes fadein {
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
+    }
+
+    /* Safari, Chrome and Opera > 12.1 */
+    @-webkit-keyframes fadein {
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
+    }
+
+    /* Internet Explorer */
+    @-ms-keyframes fadein {
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
+    }
+
+    /* Opera < 12.1 */
+    @-o-keyframes fadein {
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
+    }
+
+
+
+    .banner {
+      background: url('./images/banner.jpg') no-repeat center/cover;
+      height: 100vh;
+      z-index: 10;
+
+    }
+    .banner-2 {
+      background: url('./images/banner-2.jpg') no-repeat center/cover;
+      height: 100vh;
+      z-index: 10;
+
+    }
+
+    .nav-pills>li.active>a,
+    .nav-pills>li.active>a:focus,
+    .nav-pills>li.active>a:hover {
+      color: #999;
+      background-color: transparent !important;
+      width: 75%;
+    }
+
+    .nav-pills>li>a>.fa {
+      padding: 0 10px;
+    }
+
+    @media screen and (max-width: 991px) {
+
+      .nav-pills>li.active>a,
+      .nav-pills>li.active>a:focus,
+      .nav-pills>li.active>a:hover {
+        font-size: 16px;
+
+
+      }
+    }
+  </style>
 </head>
 
-<body class="">
-
-
-  <div class="banner">
-    <style>
-      .banner {
-        background: url('./images/banner.jpg') no-repeat center/cover;
-        height: 100vh;
-      }
-    </style>
-  </div>
-
-  <section class="wrapper d-none-tab">
+<body data-spy="scroll" data-target="#myScrollspy" data-offset="20">
+  <div class="banner-2"></div>
+  <section class="feature-section">
     <div class="container">
       <div class="row">
+        <div class="col-md-7 col-sm-6 col-xs-12">
+          <nav class="" id="myScrollspy">
+            <ul class="nav nav-pills nav-stacked" id="nav-pills">
+              <li class="active">
+                <a href="#section1" class="nav-link d-flex justify-content-center align-items-center">
+                  <i class="fa fa-quote-left pe-5" aria-hidden="true"></i>
+                  Twenty years from now you will be more disappointed by the things that you didn’t do than by the ones
+                  you did do.So throw off the bowlines. Sail away from the safe harbor. Catch the trade winds in your
+                  sails. Explore. Dream. Discover.
+                  <i class="fa fa-quote-right" aria-hidden="true"></i>
+                </a>
+              </li>
+              <li>
+                <a href="#section2" class="nav-link">
+                  <i class="fa fa-quote-left" aria-hidden="true"></i>
+                  We are stronger, gentler, more resilient, and more beautiful than any of us imagine
+                  <i class="fa fa-quote-right" aria-hidden="true"></i><br><br>– Mark Nepo
+                </a>
+              </li>
+              <li>
+                <a href="#section3" class="nav-link">
+                  <i class="fa fa-quote-left" aria-hidden="true"></i>
+                  Freedom is about having choice. If I am aware of my automatic reactions to experience as they arise,
+                  then I can take a breath, creating a space for something new. I can choose a new response in that
+                  moment, one that reflects a version of me I aspire to be.
+                  <i class="fa fa-quote-right" aria-hidden="true"></i><br><br>– Stacie Smith
+                </a>
+              </li>
+              <li>
+                <a href="#section4" class="nav-link">
+                  <i class="fa fa-quote-left" aria-hidden="true"></i>
+                  You are a seed, full of possibilities
+                  <i class="fa fa-quote-right" aria-hidden="true"></i><br><br>–Paramahamsa Nithyananda
+                </a>
+              </li>
 
+            </ul>
+          </nav>
 
+        </div>
 
-          <div class="col-6 col-sm-4 col-md-5">
-            <nav id="navbar-example" class="navbar">
-              <ul class="nav nav-pills flex-column">
-                <li class="nav-item">
-                  <a class="nav-link active wow fadeInUp" data-wow-delay="0s" href="#content-1"><i
-                      class="fa fa-quote-left" aria-hidden="true"></i>Twenty years from now you will
-                    be more disappointed by the things that you didn’t do than by the ones you did do.
-                    So throw off the bowlines. Sail away from the safe harbor. Catch the trade winds
-                    in your sails. Explore. Dream. Discover.<i class="fa fa-quote-right" aria-hidden="true"></i></a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link wow fadeInUp" data-wow-delay="0.2s" href="#content-2"><i
-                      class="fa fa-quote-left" aria-hidden="true"></i>We are stronger, gentler, more
-                    resilient, and more beautiful than any of us imagine<i class="fa fa-quote-right"
-                      aria-hidden="true"></i><br><br>– Mark Nepo</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link wow fadeInUp" data-wow-delay="0.4s" href="#content-3"><i
-                      class="fa fa-quote-left" aria-hidden="true"></i>Freedom is about having choice.
-                    If I am aware of my automatic reactions to experience as they arise, then I can
-                    take a breath, creating a space for something new. I can choose a new response in
-                    that moment, one that reflects a version of me I aspire to be.<i class="fa fa-quote-right"
-                      aria-hidden="true"></i><br><br>– Stacie Smith</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link wow fadeInUp" data-wow-delay="0.4s" href="#content-4"><i class="fa fa-quote-left"
-                      aria-hidden="true"></i>You are a seed, full of
-                    possibilities<i class="fa fa-quote-right" aria-hidden="true"></i><br><br>–
-                    Paramahamsa Nithyananda
-                  </a>
-                </li>
-  
-              </ul>
-            </nav>
+        <div class="col-sm-6 col-md-5 col-xs-12">
+          <div id="section1" class="feature1">
+            <img src="images/image-1.jpg" alt="" class="img-fluid">
+          </div>
+          <div id="section2" class="feature2">
+            <img src="images/image-2.jpg" alt="" class="img-fluid">
+          </div>
+          <div id="section3" class="feature1">
+            <img src="images/image-3.jpg" alt="" class="img-fluid">
+          </div>
+          <div id="section4" class="feature1">
+            <img src="images/image-4.jpg" alt="" class="img-fluid">
           </div>
 
 
-          <div class="col">
-            <div class="scrollableArea wow fadeInUp" data-wow-delay="0.2s">
-              <div data-spy="scroll" data-target="#navbar-example" data-offset="20" class="scrollspy-example">
-    
-                <div class="typeFont active content-1" id="content-1">
-      
-                  <div id="feature1"><img src="images/image-1.jpg" id="img1" class="wow fadeInUp">
-                  </div>
-      
-                </div>
-                <div class="typeFont content-2 " id="content-2">
-                  <div class="row justify-content-center align-items-center">
-                    <div class="col-lg-9">
-      
-                      <div id="feature2"> <img src="images/image-2.jpg" id="img2"></div>
-      
-                    </div>
-                  </div>
-                </div>
-      
-                <div class="typeFont content-3" id="content-3">
-                  <div id="item3">
-                    <div class="row">
-      
-                      <div class="col-lg-12">
-                        <div class="fontRegularContent">
-      
-                          <div id="feature1"> <img src="images/image-3.jpg" id="img1"></div>
-      
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="typeFont content-4" id="content-4">
-                  <div id="feature1"> <img src="images/image-4.jpg" id="img1"></div>
-                </div>
-  
-  
-              </div>
-            
-            </div>
-            
-          </div>
-
-
-  
-        
+        </div>
       </div>
     </div>
+
   </section>
 
 
 
-
-<!-- JQUERY CDN -->
+  <section class="banner-2"></section>
+  <section class="banner"></section>
+  <!-- JQUERY CDN -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
     integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-<!-- Bootstrap JS CDN -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-v4-rtl/4.6.2-1/js/bootstrap.min.js" integrity="sha512-73t+oD9YRdVZBwLUw/FLF+4+mt6JyUhm8xUEgwA2/+QI3pM+t/6ALkELMcin6caoV1GVt3OMudVlHiMei0DXfQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script>
 
-  
+
+    var windw = this;
+
+    $.fn.followTo = function (pos) {
+      var $this = this,
+        $window = $(windw);
+
+      $window.scroll(function (e) {
+        if ($window.scrollTop() > pos) {
+          $this.css({
+            position: 'absolute',
+            // top: pos
+          });
+        } else {
+          $this.css({
+            position: 'fixed',
+            // top: 0,
+
+          });
+        }
+      });
+    };
+
+    $('#nav-pills').followTo(3000);
+
+  </script>
 
 
 </body>
 
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-correct html
-
-
-<!DOCTYPE html>
-    <html lang="en">
-    <head>
-  <title>Bootstrap Example</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-  <style>
-    body {
-    position: relative;
-    }
-    ul.nav-pills {
-    top: 20px;
-    position: fixed;
-    width: 50%;
-   
-    }
-    div.col-sm-9 div {
-    /* height: 250px; */
-    font-size: 28px;
-    }
-
-
-    .feature1 {
-  /* width: 100%; */
-  text-align: end;
-  padding-bottom: 10%;
-}
- .feature1 img {
-  max-width: 54.5625rem;
-  width: 45.46875vw;
-  z-index: 10;
-  margin-top: 10px;
-  box-shadow: 0 0 40px 10px rgb(0 0 0 / 20%);
-}
- .feature2 {
-  text-align: end;
-}
- .feature2 img {
-  z-index: 5;
-  max-width: 36.1875rem;
-  width: 30.15625vw;
-  margin-top: 18px;
-}
-
-nav li {
-  display: none !important;
-}
-nav li.active {
-  color: red;
-  display: block !important;
-  -webkit-animation: fadein 5s; /* Safari, Chrome and Opera > 12.1 */
-  -moz-animation: fadein 5s; /* Firefox < 16 */
-  -ms-animation: fadein 5s; /* Internet Explorer */
-  -o-animation: fadein 5s; /* Opera < 12.1 */
-  animation: fadein 5s;
-  font-size: 20px;
-  line-height: 1.7;
-  text-decoration: none;
-  font-family: nixie;
-  padding-left: 50px;
-}
-@keyframes fadein {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-
-    
-  </style>
-  </head>
-  <body data-spy="scroll" data-target="#myScrollspy" data-offset="20">
-  <div class="container">
-  <div class="row">
-    <div class="col-md-7">
-        <nav class="" id="myScrollspy">
-            <ul class="nav nav-pills nav-stacked">
-            <li class="active"><a href="#section1" class="nav-link"><i
-                class="fa fa-quote-left" aria-hidden="true"></i>Twenty years from now you will
-              be more disappointed by the things that you didn’t do than by the ones you did do.
-              So throw off the bowlines. Sail away from the safe harbor. Catch the trade winds
-              in your sails. Explore. Dream. Discover.<i class="fa fa-quote-right" aria-hidden="true"></i></a></li>
-            <li><a href="#section2" class="nav-link"><i
-              class="fa fa-quote-left" aria-hidden="true"></i>We are stronger, gentler, more
-            resilient, and more beautiful than any of us imagine<i class="fa fa-quote-right"
-              aria-hidden="true"></i><br><br>– Mark Nepo</a></li>
-            <li><a href="#section3" class="nav-link"><i
-              class="fa fa-quote-left" aria-hidden="true"></i>Freedom is about having choice.
-            If I am aware of my automatic reactions to experience as they arise, then I can
-            take a breath, creating a space for something new. I can choose a new response in
-            that moment, one that reflects a version of me I aspire to be.<i class="fa fa-quote-right"
-              aria-hidden="true"></i><br><br>– Stacie Smith</a></li>
-            <li><a href="#section4" class="nav-link"><i class="fa fa-quote-left"
-              aria-hidden="true"></i>You are a seed, full of
-            possibilities<i class="fa fa-quote-right" aria-hidden="true"></i><br><br>–
-            Paramahamsa Nithyananda</a></li>
-            </ul>
-            </nav>
-
-    </div>
- 
-  <div class="col-sm-5">
-  <div id="section1" class="feature1"> 
-    <img src="images/image-1.jpg" alt="" class="img-fluid">
-  <div id="section2" class="feature2"> 
-    <img src="images/image-2.jpg" alt="" class="img-fluid">
-  </div> 
-  <div id="section3" class="feature1"> 
-    <img src="images/image-3.jpg" alt="" class="img-fluid">
-  </div>
-  <div id="section4" class="feature1"> 
-    <img src="images/image-4.jpg" alt="" class="img-fluid">
-  </div> 
- 
-  </div>
-  </div>
-  </div>
-  </body>
-    </html>
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      <!DOCTYPE html>
-    <html lang="en">
-    <head>
-  <title>Bootstrap Example</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-  <style>
-    body {
-    position: relative;
-    }
-    ul.nav-pills {
-    top: 20px;
-    position: fixed;
-    width: 50%;
-   
-    }
-    div.col-sm-9 div {
-    /* height: 250px; */
-    font-size: 28px;
-    }
-
-
-    .feature1 {
-  /* width: 100%; */
-  text-align: end;
-  padding-bottom: 10%;
-}
- .feature1 img {
-  max-width: 54.5625rem;
-  width: 45.46875vw;
-  z-index: 10;
-  margin-top: 10px;
-  box-shadow: 0 0 40px 10px rgb(0 0 0 / 20%);
-}
- .feature2 {
-  text-align: end;
-}
- .feature2 img {
-  z-index: 5;
-  max-width: 36.1875rem;
-  width: 30.15625vw;
-  margin-top: 18px;
-}
-
-nav li {
-  display: none !important;
-}
-nav li.active {
-  color: red;
-  display: block !important;
-  -webkit-animation: fadein 5s; /* Safari, Chrome and Opera > 12.1 */
-  -moz-animation: fadein 5s; /* Firefox < 16 */
-  -ms-animation: fadein 5s; /* Internet Explorer */
-  -o-animation: fadein 5s; /* Opera < 12.1 */
-  animation: fadein 5s;
-  font-size: 20px;
-  line-height: 1.7;
-  text-decoration: none;
-  font-family: nixie;
-  padding-left: 50px;
-}
-@keyframes fadein {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-.banner-2{
-  background: url('./images/banner-2.jpg')no-repeat center/cover;
-  height: 100vh;
-}
-
-    
-  </style>
-  </head>
-  <body data-spy="scroll" data-target="#myScrollspy" data-offset="20">
-  <div class="container">
-  <div class="row">
-    <div class="col-md-7">
-        <nav class="" id="myScrollspy">
-            <ul class="nav nav-pills nav-stacked">
-            <li class="active"><a href="#section1" class="nav-link"><i
-                class="fa fa-quote-left" aria-hidden="true"></i>Twenty years from now you will
-              be more disappointed by the things that you didn’t do than by the ones you did do.
-              So throw off the bowlines. Sail away from the safe harbor. Catch the trade winds
-              in your sails. Explore. Dream. Discover.<i class="fa fa-quote-right" aria-hidden="true"></i></a></li>
-            <li><a href="#section2" class="nav-link"><i
-              class="fa fa-quote-left" aria-hidden="true"></i>We are stronger, gentler, more
-            resilient, and more beautiful than any of us imagine<i class="fa fa-quote-right"
-              aria-hidden="true"></i><br><br>– Mark Nepo</a></li>
-            <li><a href="#section3" class="nav-link"><i
-              class="fa fa-quote-left" aria-hidden="true"></i>Freedom is about having choice.
-            If I am aware of my automatic reactions to experience as they arise, then I can
-            take a breath, creating a space for something new. I can choose a new response in
-            that moment, one that reflects a version of me I aspire to be.<i class="fa fa-quote-right"
-              aria-hidden="true"></i><br><br>– Stacie Smith</a></li>
-            <li><a href="#section4" class="nav-link"><i class="fa fa-quote-left"
-              aria-hidden="true"></i>You are a seed, full of
-            possibilities<i class="fa fa-quote-right" aria-hidden="true"></i><br><br>–
-            Paramahamsa Nithyananda</a></li>
-            </ul>
-            </nav>
-
-    </div>
- 
-  <div class="col-sm-5">
-  <div id="section1" class="feature1"> 
-    <img src="images/image-1.jpg" alt="" class="img-fluid">
-  <div id="section2" class="feature2"> 
-    <img src="images/image-2.jpg" alt="" class="img-fluid">
-  </div> 
-  <div id="section3" class="feature1"> 
-    <img src="images/image-3.jpg" alt="" class="img-fluid">
-  </div>
-  <div id="section4" class="feature1"> 
-    <img src="images/image-4.jpg" alt="" class="img-fluid">
-  </div> 
- 
-  </div>
-  </div>
-  </div>
-  </div>
-
-  <section class="banner-2" style="background: url('./images/banner-2.jpg')"></section>
-  </body>
-    </html>
-
